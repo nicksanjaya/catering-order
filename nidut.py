@@ -69,11 +69,13 @@ def main():
     # Menyimpan hasilnya
     x_value = pyo.value(x)
     y_value = pyo.value(y)
+    z_value = pyo.value(model.obj)
     
     st.markdown('---'*10)
     
     st.write('<center><b><h3>Ayam= ', x_value,'</b></h3>', unsafe_allow_html=True)
     st.write('<center><b><h3>Daging= ', y_value,'</b></h3>', unsafe_allow_html=True)
+    st.write('<center><b><h3>Total= ', z_value,'</b></h3>', unsafe_allow_html=True)
 
 if __name__ == '__main__':
 	main() 
