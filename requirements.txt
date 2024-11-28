@@ -1,3 +1,2 @@
 streamlit==1.40.1
 pyomo==6.8.0
-glpk==4.65
