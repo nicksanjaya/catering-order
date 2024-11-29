@@ -16,19 +16,19 @@ def main():
     # Nilai awal
     harga_ayam = 0
     ayam_min = 1
-    ayam_max = 1
+    ayam_max = 200
     harga_daging = 0
     daging_min = 1
-    daging_max = 1
+    daging_max = 200
     harga_ikan = 0
-    ikan_min = 0
-    ikan_max =0
+    ikan_min = 1
+    ikan_max =200
     harga_telur = 0
     telur_min = 0
-    telur_max = 0
+    telur_max = 200
     harga_special = 0
     special_min = 0
-    special_max = 0
+    special_max = 200
 
     with st.container():
         col_a = st.columns(1)
