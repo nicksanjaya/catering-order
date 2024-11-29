@@ -114,7 +114,7 @@ def main():
     model.C7 = pyo.Constraint(expr = s>=0)
 
     # Mendefinisikan fungsi tujuan
-    model.obj = pyo.Objective(expr = 18000*a+15000*d+10000*i+13000*t+12000*s<=7000000, sense=maximize)
+    model.obj = pyo.Objective(expr = 18000*a+15000*d+10000*i+13000*t+12000*s, sense=maximize)
 
 
     # Mendefinisikan solvernya (pada bagian ini kita bisa memilih 'gurobi', atau 'glpk')
