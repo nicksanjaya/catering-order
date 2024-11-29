@@ -14,19 +14,19 @@ st.subheader('Selamat datang di Data Science Deployment')
 def main():
     
     # Nilai awal
-    harga_ayam = 0
+    harga_ayam = 10000
     ayam_min = 1
     ayam_max = 200
-    harga_daging = 0
+    harga_daging = 10000
     daging_min = 1
     daging_max = 200
-    harga_ikan = 0
+    harga_ikan = 10000
     ikan_min = 1
     ikan_max =200
-    harga_telur = 0
+    harga_telur = 10000
     telur_min = 0
     telur_max = 200
-    harga_special = 0
+    harga_special = 10000
     special_min = 0
     special_max = 200
 
@@ -105,7 +105,7 @@ def main():
     s = model.s
     
     # Mendefinisikan fungsi pembatas
-    model.C1 = pyo.Constraint(expr = 18000*a+15000*d+10000*i+13000*t+12000*s<=7000000)
+    model.C1 = pyo.Constraint(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s<=7000000)
     model.C2 = pyo.Constraint(expr = a+d+i+t+s==400)
     model.C3 = pyo.Constraint(expr = a>=0)
     model.C4 = pyo.Constraint(expr = d>=0)
@@ -114,7 +114,7 @@ def main():
     model.C7 = pyo.Constraint(expr = s>=0)
 
     # Mendefinisikan fungsi tujuan
-    model.obj = pyo.Objective(expr = 18000*a+15000*d+10000*i+13000*t+12000*s, sense=maximize)
+    model.obj = pyo.Objective(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s, sense=maximize)
 
 
     # Mendefinisikan solvernya (pada bagian ini kita bisa memilih 'gurobi', atau 'glpk')
