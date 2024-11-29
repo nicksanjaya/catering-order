@@ -15,20 +15,20 @@ def main():
     
     # Nilai awal
     harga_ayam = 10000
-    ayam_min = 1
+    ayam_min = 140
     ayam_max = 200
     harga_daging = 10000
-    daging_min = 1
+    daging_min = 80
     daging_max = 200
     harga_ikan = 10000
-    ikan_min = 1
+    ikan_min = 50
     ikan_max =200
     harga_telur = 10000
-    telur_min = 0
+    telur_min = 50
     telur_max = 200
     harga_special = 10000
     special_min = 0
-    special_max = 200
+    special_max = 100
 
     with st.container():
         col_a = st.columns(1)
