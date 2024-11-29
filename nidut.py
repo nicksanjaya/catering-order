@@ -32,7 +32,7 @@ def main():
     
     
     with st.container():
-        col_a = st.columns(1)
+        col_a = st.columns()
         with col_a:
             harga_ayam = st.number_input('Harga Ayam Per Porsi', value=harga_ayam)
     with st.container():
