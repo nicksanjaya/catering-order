@@ -29,7 +29,11 @@ def main():
     harga_special = 0
     special_min = 0
     special_max = 0
-    
+
+    with st.container():
+        col_a = st.columns(1)
+        with col_a[0]:
+            harga_ayam = st.number_input('Harga Ayam Per Porsi', value=harga_ayam)	
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
@@ -50,7 +54,7 @@ def main():
 
     with st.container():
         col_i = st.columns(1)
-        with col_i:
+        with col_i[0]:
             harga_ikan = st.number_input('Harga Ikan Per Porsi', value=harga_ikan)
     with st.container():
         col5, col6 = st.columns(2)
@@ -61,7 +65,7 @@ def main():
 
     with st.container():
         col_t = st.columns(1)
-        with col_t:
+        with col_t[0]:
             harga_telur = st.number_input('Harga Telur Per Porsi', value=harga_telur)
     with st.container():
         col7, col8 = st.columns(2)
@@ -72,7 +76,7 @@ def main():
 
     with st.container():
         col_s = st.columns(1)
-        with col_s:
+        with col_s[0]:
             harga_special = st.number_input('Harga Special Per Porsi', value=harga_special)
     with st.container():
         col9, col10 = st.columns(2)
