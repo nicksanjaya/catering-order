@@ -31,6 +31,11 @@ def main():
     special_max = 100
 
     with st.container():
+        col_b = st.columns(1)
+        with col_b[0]:
+            budget = st.number_input('Budget', value=budget)
+	
+    with st.container():
         col_a = st.columns(1)
         with col_a[0]:
             harga_ayam = st.number_input('Harga Ayam Per Porsi', value=harga_ayam)	
@@ -105,7 +110,7 @@ def main():
     s = model.s
     
     # Mendefinisikan fungsi pembatas
-    model.C1 = pyo.Constraint(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s<=7000000)
+    model.C1 = pyo.Constraint(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s<=budget)
     model.C2 = pyo.Constraint(expr = a+d+i+t+s==400)
     model.C3 = pyo.Constraint(expr = a>=0)
     model.C4 = pyo.Constraint(expr = d>=0)
