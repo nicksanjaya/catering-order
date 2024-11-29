@@ -39,7 +39,7 @@ def main():
  
     with st.container():
         col_d = st.columns(1)
-        with col_d:
+        with col_d[0]:
             harga_daging = st.number_input('Harga Daging Per Porsi', value=harga_daging)
     with st.container():
         col3, col4 = st.columns(2)
