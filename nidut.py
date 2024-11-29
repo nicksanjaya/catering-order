@@ -14,6 +14,7 @@ st.subheader('Selamat datang di Data Science Deployment')
 def main():
     
     # Nilai awal
+    budget = 7000000
     harga_ayam = 10000
     ayam_min = 140
     ayam_max = 200
