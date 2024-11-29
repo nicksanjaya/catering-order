@@ -30,11 +30,6 @@ def main():
     special_min = 0
     special_max = 0
     
-    
-    with st.container():
-        col_a = st.columns()
-        with col_a:
-            harga_ayam = st.number_input('Harga Ayam Per Porsi', value=harga_ayam)
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
