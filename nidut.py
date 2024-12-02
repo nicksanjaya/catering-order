@@ -97,11 +97,11 @@ def main():
     model = pyo.ConcreteModel()
 
     # Mendefinisikan variabelnya
-    model.a = pyo.Var(bounds=(ayam_min,ayam_max))
-    model.d = pyo.Var(bounds=(daging_min,daging_max))
-    model.i = pyo.Var(bounds=(ikan_min, ikan_max))
-    model.t = pyo.Var(bounds=(telur_min, telur_max))
-    model.s = pyo.Var(bounds=(special_min, special_max))
+    model.a = pyo.Var(bounds=(ayam_min,None))
+    model.d = pyo.Var(bounds=(daging_min,None))
+    model.i = pyo.Var(bounds=(ikan_min,None))
+    model.t = pyo.Var(bounds=(telur_min,None))
+    model.s = pyo.Var(bounds=(special_min,None))
     
     # Mendefinisikan namavariabel baru untuk memudahkan penulisan
     a = model.a
