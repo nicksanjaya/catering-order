@@ -14,7 +14,7 @@ st.subheader('Selamat datang di Data Science Deployment')
 def main():
     
     # Nilai awal
-    kuota = 0
+    kuota = 400
     budget = 7000000
     harga_ayam = 10000
     ayam_min = 140
@@ -115,7 +115,7 @@ def main():
     
     # Mendefinisikan fungsi pembatas
     model.C1 = pyo.Constraint(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s<=budget)
-    model.C2 = pyo.Constraint(expr = a+d+i+t+s==400)
+    model.C2 = pyo.Constraint(expr = a+d+i+t+s==kuota)
     model.C3 = pyo.Constraint(expr = a>=0)
     model.C4 = pyo.Constraint(expr = d>=0)
     model.C5 = pyo.Constraint(expr = i>=0)
