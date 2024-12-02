@@ -25,7 +25,7 @@ def main():
     harga_telur = 13000 
     telur_min = 50
     harga_special = 15000 
-    special_min = Null 
+    special_min = 50 
 
     with st.container():
         col_k = st.columns(1)
