@@ -1,4 +1,4 @@
-# Mebgimpor library
+# Mengimpor library
 import streamlit as st
 import pyomo.environ as pyo
 from pyomo.environ import *
@@ -126,7 +126,7 @@ def main():
     model.obj = pyo.Objective(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s, sense=maximize)
 
 
-    # Mendefinisikan solvernya (pada bagian ini kita bisa memilih 'gurobi', atau 'glpk')
+    # Mendefinisikan solvernya
     opt = SolverFactory('glpk')
     
     # Menjalankan optimasinya
