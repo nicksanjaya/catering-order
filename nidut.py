@@ -30,6 +30,8 @@ def main():
         col_b = st.columns(1)
         with col_b[0]:
             budget = st.number_input('Budget', value=budget)
+
+    st.markdown('---'*10)	
 	
     with st.container():
         col_a = st.columns(1)
@@ -39,6 +41,8 @@ def main():
         col1 = st.columns(1)
         with col1[0]:
             ayam_min = st.number_input('Ayam (Min)', value=ayam_min)
+
+    st.markdown('---'*10)
  
     with st.container():
         col_d = st.columns(1)
@@ -49,6 +53,8 @@ def main():
         with col2[0]:
             daging_min = st.number_input('Daging (Min)', value=daging_min)
 
+    st.markdown('---'*10)
+	
     with st.container():
         col_i = st.columns(1)
         with col_i[0]:
@@ -58,6 +64,8 @@ def main():
         with col3[0]:
             ikan_min = st.number_input('Ikan (Min)', value=ikan_min)
 
+    st.markdown('---'*10)
+
     with st.container():
         col_t = st.columns(1)
         with col_t[0]:
@@ -66,6 +74,8 @@ def main():
         col4 = st.columns(1)
         with col4[0]:
             telur_min = st.number_input('Telur (Min)', value=telur_min)
+
+    st.markdown('---'*10)
 
     with st.container():
         col_s = st.columns(1)
