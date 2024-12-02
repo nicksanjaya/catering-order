@@ -32,6 +32,8 @@ def main():
         with col_k[0]:
             kuota = st.number_input('Budget', value=kuota)
 
+    st.markdown('---'*10)
+	
     with st.container():
         col_b = st.columns(1)
         with col_b[0]:
@@ -113,7 +115,7 @@ def main():
     
     # Mendefinisikan fungsi pembatas
     model.C1 = pyo.Constraint(expr = harga_ayam*a+harga_daging*d+harga_ikan*i+harga_telur*t+harga_special*s<=budget)
-    model.C2 = pyo.Constraint(expr = a+d+i+t+s==400)
+    model.C2 = pyo.Constraint(expr = a+d+i+t+s==kuota)
     model.C3 = pyo.Constraint(expr = a>=0)
     model.C4 = pyo.Constraint(expr = d>=0)
     model.C5 = pyo.Constraint(expr = i>=0)
