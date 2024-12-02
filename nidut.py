@@ -14,6 +14,7 @@ st.subheader('Selamat datang di Data Science Deployment')
 def main():
     
     # Nilai awal
+    kuota = 0
     budget = 7000000
     harga_ayam = 10000
     ayam_min = 140
@@ -25,6 +26,11 @@ def main():
     telur_min = 50
     harga_special = 10000
     special_min = 0
+
+    with st.container():
+        col_k = st.columns(1)
+        with col_k[0]:
+            kuota = st.number_input('Budget', value=kuota)
 
     with st.container():
         col_b = st.columns(1)
