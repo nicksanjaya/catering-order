@@ -95,6 +95,12 @@ def main():
             special_min = st.number_input('Special (Min)', value=special_min)
     
     st.markdown('---'*10)
+
+    # Memastikan bahwa kuota dan budget tidak saling bertentangan
+    total_min_budget = (ayam_min * harga_ayam) + (daging_min * harga_daging) + (ikan_min * harga_ikan) + (telur_min * harga_telur) + (special_min * harga_special)
+    if total_min_budget > budget:
+        st.error("Anggaran tidak cukup untuk memenuhi kuota minimum!")
+        return
     
     # Membuat modelnya
     model = pyo.ConcreteModel()
