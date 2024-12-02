@@ -17,19 +17,14 @@ def main():
     budget = 7000000
     harga_ayam = 10000
     ayam_min = 140
-    ayam_max = 200
     harga_daging = 10000
     daging_min = 80
-    daging_max = 200
     harga_ikan = 10000
     ikan_min = 50
-    ikan_max =200
     harga_telur = 10000
     telur_min = 50
-    telur_max = 200
     harga_special = 10000
     special_min = 0
-    special_max = 100
 
     with st.container():
         col_b = st.columns(1)
@@ -41,55 +36,45 @@ def main():
         with col_a[0]:
             harga_ayam = st.number_input('Harga Ayam Per Porsi', value=harga_ayam)	
     with st.container():
-        col1, col2 = st.columns(2)
-        with col1:
+        col1 = st.columns(1)
+        with col1[0]:
             ayam_min = st.number_input('Ayam (Min)', value=ayam_min)
-        with col2:
-            ayam_max = st.number_input('Ayam (Pcs)', value=ayam_max)  
  
     with st.container():
         col_d = st.columns(1)
         with col_d[0]:
             harga_daging = st.number_input('Harga Daging Per Porsi', value=harga_daging)
     with st.container():
-        col3, col4 = st.columns(2)
-        with col3:
+        col2= st.columns(1)
+        with col2[0]:
             daging_min = st.number_input('Daging (Min)', value=daging_min)
-        with col4:
-            daging_max = st.number_input('Daging (Max)', value=daging_max)
 
     with st.container():
         col_i = st.columns(1)
         with col_i[0]:
             harga_ikan = st.number_input('Harga Ikan Per Porsi', value=harga_ikan)
     with st.container():
-        col5, col6 = st.columns(2)
-        with col5:
+        col3 = st.columns(1)
+        with col3[0]:
             ikan_min = st.number_input('Ikan (Min)', value=ikan_min)
-        with col6:
-            ikan_max = st.number_input('Ikan (Max)', value=ikan_max)
 
     with st.container():
         col_t = st.columns(1)
         with col_t[0]:
             harga_telur = st.number_input('Harga Telur Per Porsi', value=harga_telur)
     with st.container():
-        col7, col8 = st.columns(2)
-        with col7:
+        col4 = st.columns(1)
+        with col4[0]:
             telur_min = st.number_input('Telur (Min)', value=telur_min)
-        with col8:
-            telur_max = st.number_input('Telur (Max)', value=telur_max)
 
     with st.container():
         col_s = st.columns(1)
         with col_s[0]:
             harga_special = st.number_input('Harga Special Per Porsi', value=harga_special)
     with st.container():
-        col9, col10 = st.columns(2)
-        with col9:
+        col5 = st.columns(1)
+        with col5[0]:
             special_min = st.number_input('Special (Min)', value=special_min)
-        with col10:
-            special_max = st.number_input('Special (Max)', value=special_max)
     
     st.markdown('---'*10)
     
