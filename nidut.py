@@ -5,10 +5,10 @@ from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
 # Membuat judul
-st.title('NICKI SANJAYA')
+st.title('CATERING ORDER')
 
 # Menambah subheader
-st.subheader('Selamat datang di Data Science Deployment')
+st.subheader('Selamat datang di aplikasi optimasi catering order')
 
 # Ini merupakan fungsi utama
 def main():
