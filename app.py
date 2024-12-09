@@ -15,7 +15,7 @@ def main():
     
     # Nilai awal
     kuota = 400
-    budget = 5000000 
+    budget = 7000000 
     harga_ayam = 15000 
     ayam_min = 100 
     harga_daging = 17000 
